@@ -1,0 +1,13 @@
+//canvas is 600x600 and appears "space race" inside it
+
+void setup(){
+size(600,600);
+background(0);
+}
+
+void draw(){
+ textSize(24);
+text("space race", 250, 100); 
+fill(255);
+ 
+}
