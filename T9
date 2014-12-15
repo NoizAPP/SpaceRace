@@ -1,0 +1,28 @@
+//create a timer and appears in the screen
+
+PFont font;
+String time = "060";
+int t;
+int interval = 60;
+
+void setup()
+{
+
+  size(300, 300);
+  font = createFont("Arial", 30);
+  fill(255);
+
+}
+
+void draw()
+{
+    background(0);
+   
+    t = interval-int(millis()/1000);
+    time = nf(t , 3);
+    if(t == 0){
+      println("GAME OVER");
+    interval+=60;}
+
+   text(time, width/2, height/2);
+}
