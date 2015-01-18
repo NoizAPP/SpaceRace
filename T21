@@ -1,0 +1,66 @@
+int y;
+String time = "10";
+int t;
+int interval = 10;
+int x;
+PImage img;
+
+void setup(){
+
+  size(600, 600);
+  textSize(100);
+}
+
+void draw(){
+
+/*
+if(keyPressed==false){
+    // Show the button
+    fill(255);
+    rect((width-335)/2, (height-100)/2, 335, 100);
+    fill(0);
+    textSize(100);
+    text("START", (width-335)/2+10, (height-100)/2+100-10);
+    textSize(24);
+    fill(255);
+    text("keep pressed any key to start the game", 80, 500);
+}
+*/ 
+if(keyPressed==true){
+    background(0);
+
+    textSize(24);
+    text("SPACE RACE",232, 100); 
+    fill(255);
+    
+
+    line(100,y,100,600);
+    y=0;
+    stroke(100,50,100);
+    t = interval-int(millis()/1000);
+    time = nf(t , 3);
+    if(y==0){
+    y=t = 10-int(millis()/1000);
+    } else {
+  textSize(24);
+text("SPACE RACE",232, 100); 
+fill(255);
+
+}
+if(t == 0){
+  textSize(24);
+text("GAME OVER", 232, 500);
+fill(255);
+noLoop();
+}
+
+text(time, 40,50);
+
+ellipse(x,300,5,5);
+x=x+1;
+if (x>600){
+x=100;
+
+}
+}
+}
