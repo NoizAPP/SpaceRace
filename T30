@@ -1,0 +1,26 @@
+void setup(){
+background(0);
+size(600,600);
+
+}
+
+
+
+void keyReleased() {
+ if (key == 'z' || key == 'Z') {
+   fill(255);
+    rect((width-335)/2,  (height-100)/2, 335, 100);
+    fill(0);
+    textSize(100);
+    text("PAUSE", (width-335)/2+10,  (height-100)/2+100-10);
+    textSize(24);
+    fill(255);
+    text("press 'c' to continue the game", 80, 500);
+  
+   noLoop();  
+    
+ }
+ if (key == 'c' || key == 'C') {
+   loop();   
+ }
+}
