@@ -16,7 +16,7 @@ void draw(){
 
 if (keyPressed==true){
  
-   if (key == 'w' || key == 'W') {
+   if (key == 's' || key == 'S') {
   
     a=a-4;
    }
