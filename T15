@@ -1,0 +1,43 @@
+int score;
+int x;
+
+void setup(){
+background(0);
+size(600,600);
+}
+
+void draw(){
+  if(score==0){
+   x=x+5; 
+  }
+   if(score==1){
+   x=x+6; 
+  }
+   if(score==2){
+   x=x+7; 
+  }
+   if(score==3){
+   x=x+8; 
+  }
+   if(score==4){
+   x=x+9; 
+  }
+   if(score==5){
+   x=x+10; 
+  }
+   if(score==6){
+   x=x+11; 
+  }
+   if(score==7){
+   x=x+12; 
+  }
+   if(score==8){
+   x=x+13; 
+  }
+   if(score==9){
+   x=x+14; 
+  }
+   if(score==10){
+   x=x+15; 
+  }
+}
