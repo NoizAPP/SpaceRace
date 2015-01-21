@@ -3,37 +3,50 @@ String time = "10";
 int t;
 int interval = 10;
 int x;
-PImage img;
+PImage cohete;
+int a=500;
+int l=250;
+int score;
 
 void setup(){
-
+  size(600,600);
   size(600, 600);
+  
   textSize(100);
+  cohete=loadImage("dibuix (2).png");
+
 }
-
-void draw(){
-
 /*
-if(keyPressed==false){
-    // Show the button
+void keyReleased (){
+   
+  if (key == 'q' || key == 'Q'){
+
     fill(255);
-    rect((width-335)/2, (height-100)/2, 335, 100);
+    rect((width-335)/2,  (height-100)/2, 335, 100);
     fill(0);
     textSize(100);
-    text("START", (width-335)/2+10, (height-100)/2+100-10);
+    text("START", (width-335)/2+10,  (height-100)/2+100-10);
     textSize(24);
     fill(255);
     text("keep pressed any key to start the game", 80, 500);
 }
-*/ 
-if(keyPressed==true){
-    background(0);
+}
+*/
 
+void draw(){
+  
+    //color of the background
+    background(10,0,70);
+    //rocket
+    image(cohete, l, a, 150, 200);  
+
+    //title
     textSize(24);
-    text("SPACE RACE",232, 100); 
+    text("SPACE RACE",250, 100); 
     fill(255);
+    textSize(24);
     
-
+    //timer
     line(100,y,100,600);
     y=0;
     stroke(100,50,100);
@@ -42,25 +55,54 @@ if(keyPressed==true){
     if(y==0){
     y=t = 10-int(millis()/1000);
     } else {
+}
+  
+  //gameover
+  if(t == 0){
   textSize(24);
-text("SPACE RACE",232, 100); 
-fill(255);
+  
+  text("GAME OVER", 232, 500);
+  fill(255);
+  noLoop();
+
+} 
+  
+  //future asteroides
+  text(time, 40,50);
+  ellipse(x,300,5,5);
+  x=x+3;
+  if (x>600){
+  x=200;
 
 }
-if(t == 0){
-  textSize(24);
-text("GAME OVER", 232, 500);
-fill(255);
-noLoop();
+
+//rocket controls
+if (keyPressed==true){
+ 
+   if (key == 'w' || key == 'W') {
+  
+    a=a-4;
+   }
+   if (key == 's' || key == 'S') {
+         a=a+4;
+
+   }
+   if (key == 'a' || key == 'a') {
+     l=l-4;
+   }
+   if (key == 'd' || key == 'd') {
+     l=l+4;
+   }
+  
 }
 
-text(time, 40,50);
-
-ellipse(x,300,5,5);
-x=x+1;
-if (x>600){
-x=100;
+//rocket returns to its position
+if(a<100){
+  a=500;
+  score=score+1;
 
 }
+text ("level: " + score, 500, 30);
 }
+
 }
