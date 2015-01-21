@@ -1,0 +1,21 @@
+
+PImage cohete;
+
+
+void setup(){
+  size(600,600);
+  size(600, 600);
+  
+  textSize(100);
+  cohete=loadImage("dibuix (2).png");
+
+}
+
+
+void draw(){
+
+background(10,0,70);
+
+image(cohete, 300, 300, 150, 200);  
+
+}
