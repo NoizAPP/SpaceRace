@@ -1,0 +1,19 @@
+int a;
+int score;
+
+
+void setup(){
+backgroud (0);
+size(600,600);
+
+}
+
+void draw(){
+if(a<100){
+  a=500;
+  score=score+1;
+
+}
+text ("level: " + score, 500, 30);
+ 
+}
